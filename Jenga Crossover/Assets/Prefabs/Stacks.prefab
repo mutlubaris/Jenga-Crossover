@@ -61,6 +61,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7434864741751398765}
     m_Modifications:
+    - target: {fileID: 1610317504391287568, guid: 681330d3006bffb47aa56a6fa01e2009, type: 3}
+      propertyPath: EnterTextHere
+      value: 8th Grade
+      objectReference: {fileID: 0}
+    - target: {fileID: 1610317504391287568, guid: 681330d3006bffb47aa56a6fa01e2009, type: 3}
+      propertyPath: TextAppearingPosRot
+      value: 
+      objectReference: {fileID: 2474308523079523244}
     - target: {fileID: 3483025728128968622, guid: 681330d3006bffb47aa56a6fa01e2009, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12
@@ -115,6 +123,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3483025728128968622, guid: 681330d3006bffb47aa56a6fa01e2009, type: 3}
   m_PrefabInstance: {fileID: 3751073266600921266}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2474308523079523244 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1610317504391287582, guid: 681330d3006bffb47aa56a6fa01e2009, type: 3}
+  m_PrefabInstance: {fileID: 3751073266600921266}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2554474160463250784 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1692559569351724498, guid: 681330d3006bffb47aa56a6fa01e2009, type: 3}
@@ -134,6 +147,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7434864741751398765}
     m_Modifications:
+    - target: {fileID: 1610317504391287568, guid: 681330d3006bffb47aa56a6fa01e2009, type: 3}
+      propertyPath: EnterTextHere
+      value: 6th Grade
+      objectReference: {fileID: 0}
+    - target: {fileID: 1610317504391287568, guid: 681330d3006bffb47aa56a6fa01e2009, type: 3}
+      propertyPath: TextAppearingPosRot
+      value: 
+      objectReference: {fileID: 6741516383719930575}
     - target: {fileID: 3483025728128968622, guid: 681330d3006bffb47aa56a6fa01e2009, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12
@@ -194,6 +215,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf13bd566a5305a488657dc437708981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6741516383719930575 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1610317504391287582, guid: 681330d3006bffb47aa56a6fa01e2009, type: 3}
+  m_PrefabInstance: {fileID: 5464645717984029137}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8899221861353672319 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3483025728128968622, guid: 681330d3006bffb47aa56a6fa01e2009, type: 3}
@@ -207,6 +233,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7434864741751398765}
     m_Modifications:
+    - target: {fileID: 1610317504391287568, guid: 681330d3006bffb47aa56a6fa01e2009, type: 3}
+      propertyPath: EnterTextHere
+      value: 7th Grade
+      objectReference: {fileID: 0}
+    - target: {fileID: 1610317504391287568, guid: 681330d3006bffb47aa56a6fa01e2009, type: 3}
+      propertyPath: TextAppearingPosRot
+      value: 
+      objectReference: {fileID: 8718348265569249650}
     - target: {fileID: 3483025728128968622, guid: 681330d3006bffb47aa56a6fa01e2009, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -259,6 +293,11 @@ PrefabInstance:
 --- !u!4 &6841818587156422082 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3483025728128968622, guid: 681330d3006bffb47aa56a6fa01e2009, type: 3}
+  m_PrefabInstance: {fileID: 7972836660036762220}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8718348265569249650 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1610317504391287582, guid: 681330d3006bffb47aa56a6fa01e2009, type: 3}
   m_PrefabInstance: {fileID: 7972836660036762220}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &8779795265115011006 stripped

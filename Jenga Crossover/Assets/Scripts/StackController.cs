@@ -23,10 +23,10 @@ public class StackController : MonoBehaviour
 
 	private void Start()
 	{
-		StartCoroutine(GetDatas());
+		StartCoroutine(SpawnBlocks());
 	}
 
-	private IEnumerator GetDatas()
+	private IEnumerator SpawnBlocks()
 	{
 		using (UnityWebRequest request = UnityWebRequest.Get(_URL))
 		{

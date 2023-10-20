@@ -30,4 +30,23 @@ public class BlockSpawner : MonoBehaviour
 			_blocks.Add(newBlock);
 		}
 	}
+
+	public Block SpawnBlock()
+	{
+		GameObject newBlock = Instantiate(_blockPrefab, transform);
+		newBlock.transform.localPosition = _blockLocalPos[_blocks.Count % 6];
+		newBlock.transform.localPosition += Vector3.up * (_blocks.Count / 6) * _heightStep;
+		switch (_blocks.Count % 6)
+		{
+			case 3:
+			case 4:
+			case 5:
+				newBlock.transform.Rotate(new Vector3(0, 90, 0));
+				break;
+			default:
+				break;
+		}
+		_blocks.Add(newBlock);
+		return newBlock.GetComponent<Block>();
+	}
 }

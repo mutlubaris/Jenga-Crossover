@@ -18,6 +18,8 @@ public class CameraRotator : MonoBehaviour
 	{
 		_camera = GetComponent<Camera>();
 		_currentTarget = _targets[_targetIndex];
+		_camera.transform.position = _currentTarget.position;
+		_camera.transform.Translate(new Vector3(0, _heightIncrement, -_distanceFromTarget));
 	}
 
 	private void Update()

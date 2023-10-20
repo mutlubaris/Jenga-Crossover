@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public string subject;
+	public string grade;
+	public string mastery;
+	public string domainid;
+	public string domain;
+	public string cluster;
+	public string standardid;
+	public string standarddescription;
 }

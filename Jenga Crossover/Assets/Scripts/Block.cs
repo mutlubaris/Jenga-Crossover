@@ -12,4 +12,10 @@ public class Block : MonoBehaviour
 	public string cluster;
 	public string standardid;
 	public string standarddescription;
+	public Rigidbody rigid;
+
+	private void Start()
+	{
+		rigid = GetComponent<Rigidbody>();
+	}
 }

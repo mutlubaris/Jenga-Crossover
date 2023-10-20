@@ -19,10 +19,34 @@ public class StackController : MonoBehaviour
 	private string _URL = "https://ga1vqcu3o1.execute-api.us-east-1.amazonaws.com/Assessment/stack";
 	private int _firstIndex = 2;
 	private int _lastIndex = 114;
+	private List<Block> blocks = new List<Block>(); 
 
 	private void Start()
 	{
 		StartCoroutine(GetDatas());
+	}
+
+	private void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.G)) 
+		{
+			foreach (var block in blocks)
+			{
+				switch (Int32.Parse(block.mastery))
+				{
+					case 0:
+						block.gameObject.SetActive(false);
+						break;
+					case 1:
+					case 2:
+						block.rigid.isKinematic = false;
+						break;
+
+					default:
+						break;
+				}
+			}
+		}
 	}
 
 	private IEnumerator GetDatas()
@@ -52,6 +76,7 @@ public class StackController : MonoBehaviour
 						newBlock.standardid = stats[i]["standardid"];
 						newBlock.standarddescription = stats[i]["standarddescription"];
 						SetMaterial(newBlock);
+						blocks.Add(newBlock);
 					}
 					else if (String.Equals(stats[i]["grade"], "7th Grade"))
 					{
@@ -65,6 +90,7 @@ public class StackController : MonoBehaviour
 						newBlock.standardid = stats[i]["standardid"];
 						newBlock.standarddescription = stats[i]["standarddescription"];
 						SetMaterial(newBlock);
+						blocks.Add(newBlock);
 					}
 					else if (String.Equals(stats[i]["grade"], "8th Grade"))
 					{
@@ -78,6 +104,7 @@ public class StackController : MonoBehaviour
 						newBlock.standardid = stats[i]["standardid"];
 						newBlock.standarddescription = stats[i]["standarddescription"];
 						SetMaterial(newBlock);
+						blocks.Add(newBlock);
 					}
 				}
 			}

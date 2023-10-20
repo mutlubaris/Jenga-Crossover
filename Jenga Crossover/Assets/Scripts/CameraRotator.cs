@@ -22,15 +22,6 @@ public class CameraRotator : MonoBehaviour
 		_camera.transform.Translate(new Vector3(0, _heightIncrement, -_distanceFromTarget));
 	}
 
-	private void Update()
-	{
-		if (Input.GetKeyDown(KeyCode.D)) 
-		{
-			_targetIndex = (_targetIndex + 1) % _targets.Length;
-			_currentTarget = _targets[_targetIndex];
-		}
-	}
-
 	private void LateUpdate()
 	{
 		if (Input.GetMouseButtonDown(0))
@@ -50,5 +41,13 @@ public class CameraRotator : MonoBehaviour
 
 			_previousPos = _camera.ScreenToViewportPoint(Input.mousePosition);
 		}
+	}
+
+	public void SwitchStack()
+	{
+		_targetIndex = (_targetIndex + 1) % _targets.Length;
+		_currentTarget = _targets[_targetIndex];
+		_camera.transform.position = _currentTarget.position;
+		_camera.transform.Translate(new Vector3(0, _heightIncrement, -_distanceFromTarget));
 	}
 }

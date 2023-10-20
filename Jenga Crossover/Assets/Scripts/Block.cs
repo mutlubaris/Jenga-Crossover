@@ -18,4 +18,12 @@ public class Block : MonoBehaviour
 	{
 		rigid = GetComponent<Rigidbody>();
 	}
+
+	private void OnMouseOver()
+	{
+		if (Input.GetMouseButtonDown(1)) 
+		{
+			print(cluster);
+		}
+	}
 }

@@ -26,29 +26,6 @@ public class StackController : MonoBehaviour
 		StartCoroutine(GetDatas());
 	}
 
-	private void Update()
-	{
-		if (Input.GetKeyDown(KeyCode.G)) 
-		{
-			foreach (var block in blocks)
-			{
-				switch (Int32.Parse(block.mastery))
-				{
-					case 0:
-						block.gameObject.SetActive(false);
-						break;
-					case 1:
-					case 2:
-						block.rigid.isKinematic = false;
-						break;
-
-					default:
-						break;
-				}
-			}
-		}
-	}
-
 	private IEnumerator GetDatas()
 	{
 		using (UnityWebRequest request = UnityWebRequest.Get(_URL))
@@ -127,6 +104,26 @@ public class StackController : MonoBehaviour
 
 			default:
 				break;
+		}
+	}
+
+	public void TestMyStack()
+	{
+		foreach (var block in blocks)
+		{
+			switch (Int32.Parse(block.mastery))
+			{
+				case 0:
+					block.gameObject.SetActive(false);
+					break;
+				case 1:
+				case 2:
+					block.rigid.isKinematic = false;
+					break;
+
+				default:
+					break;
+			}
 		}
 	}
 }

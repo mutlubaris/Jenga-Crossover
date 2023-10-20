@@ -12,6 +12,9 @@ public class StackController : MonoBehaviour
     [SerializeField] private BlockSpawner _sixthGradeBlockSpawner;
     [SerializeField] private BlockSpawner _seventhGradeBlockSpawner;
     [SerializeField] private BlockSpawner _eighthGradeBlockSpawner;
+    [SerializeField] private Material _glassMat;
+    [SerializeField] private Material _woodMat;
+    [SerializeField] private Material _stoneMat;
 
 	private string _URL = "https://ga1vqcu3o1.execute-api.us-east-1.amazonaws.com/Assessment/stack";
 	private int _firstIndex = 2;
@@ -48,6 +51,7 @@ public class StackController : MonoBehaviour
 						newBlock.cluster = stats[i]["cluster"];
 						newBlock.standardid = stats[i]["standardid"];
 						newBlock.standarddescription = stats[i]["standarddescription"];
+						SetMaterial(newBlock);
 					}
 					else if (String.Equals(stats[i]["grade"], "7th Grade"))
 					{
@@ -60,6 +64,7 @@ public class StackController : MonoBehaviour
 						newBlock.cluster = stats[i]["cluster"];
 						newBlock.standardid = stats[i]["standardid"];
 						newBlock.standarddescription = stats[i]["standarddescription"];
+						SetMaterial(newBlock);
 					}
 					else if (String.Equals(stats[i]["grade"], "8th Grade"))
 					{
@@ -72,9 +77,29 @@ public class StackController : MonoBehaviour
 						newBlock.cluster = stats[i]["cluster"];
 						newBlock.standardid = stats[i]["standardid"];
 						newBlock.standarddescription = stats[i]["standarddescription"];
+						SetMaterial(newBlock);
 					}
-				}			
+				}
 			}
+		}
+	}
+
+	private void SetMaterial(Block newBlock)
+	{
+		switch (Int32.Parse(newBlock.mastery))
+		{
+			case 0:
+				newBlock.GetComponent<MeshRenderer>().material = _glassMat;
+				break;
+			case 1:
+				newBlock.GetComponent<MeshRenderer>().material = _woodMat;
+				break;
+			case 2:
+				newBlock.GetComponent<MeshRenderer>().material = _stoneMat;
+				break;
+
+			default:
+				break;
 		}
 	}
 }

@@ -50,6 +50,9 @@ MonoBehaviour:
   _sixthGradeBlockSpawner: {fileID: 6677571224247854083}
   _seventhGradeBlockSpawner: {fileID: 8779795265115011006}
   _eighthGradeBlockSpawner: {fileID: 2554474160463250784}
+  _glassMat: {fileID: 2100000, guid: 4eb660b67ea55e241aa41a8027e649e1, type: 2}
+  _woodMat: {fileID: 2100000, guid: 6308b914154610d4a94cc71653199f7d, type: 2}
+  _stoneMat: {fileID: 2100000, guid: d5d2e26d5eb8c3a4f91f36d4c165df07, type: 2}
 --- !u!1001 &3751073266600921266
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60,7 +63,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3483025728128968622, guid: 681330d3006bffb47aa56a6fa01e2009, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8
+      value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 3483025728128968622, guid: 681330d3006bffb47aa56a6fa01e2009, type: 3}
       propertyPath: m_LocalPosition.y
@@ -133,7 +136,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3483025728128968622, guid: 681330d3006bffb47aa56a6fa01e2009, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8
+      value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 3483025728128968622, guid: 681330d3006bffb47aa56a6fa01e2009, type: 3}
       propertyPath: m_LocalPosition.y
